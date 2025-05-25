@@ -41,6 +41,9 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 3.	Install dependencies
 ```bash
 pip install -r requirements.txt
+
+# After installing requirements
+python -m spacy download en_core_web_sm
 ```
 5.  Create a .env file in the root directory with the following variables:
 ```bash
