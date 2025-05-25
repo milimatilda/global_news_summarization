@@ -203,10 +203,10 @@ def generate_summaries(cluster_news_pair, topic):
         
         combined_news = "\n".join(news)
         if cluster!=-1:            
-            summary = summarizer(news, topic, "summary") 
+            summary = summarizer(combined_news, topic, "summary") 
             summaries.append(f"{cluster+1}. {summary}")
         else:            
-            summary = summarizer(news, topic, "outlier")
+            summary = summarizer(combined_news, topic, "outlier")
             summaries.append(f"On other news, {summary}")
     st.spinner("Writing...")
     logging.info("Response from LLM received")
